@@ -21,26 +21,26 @@ INSERT INTO videos (ID, title, length_in_minutes, URL) VALUES (4, "Advanced SQL 
 SELECT * FROM videos;
 
 CREATE TABLE reviewers (
-	ID INT NOT NULL,
+	user_id INT NOT NULL,
     user_name VARCHAR(255) NOT NULL,
     rating INT,
     review VARCHAR(255) NOT NULL
 );
 
-INSERT INTO reviewers (ID, user_name, rating, review) VALUES (1, "Olivia", 5, "Awesome video!");
-INSERT INTO reviewers (ID, user_name, rating, review) VALUES (1, "Emma", 5, "Great video!");
-INSERT INTO reviewers (ID, user_name, rating, review) VALUES (2, "Leo", 3, "Video was confusing!");
-INSERT INTO reviewers (ID, user_name, rating, review) VALUES (2, "Frank", 5, "Very comphresive lecture!");
-INSERT INTO reviewers (ID, user_name, rating, review) VALUES (3, "Jenna", 5, "Great information!");
-INSERT INTO reviewers (ID, user_name, rating, review) VALUES (3, "Ray", 5, "Short and concise!");
-INSERT INTO reviewers (ID, user_name, rating, review) VALUES (4, "Tom", 2, "I am stil convfused!");
-INSERT INTO reviewers (ID, user_name, rating, review) VALUES (4, "Cindy", 5, "Loved it!");
+INSERT INTO reviewers (user_id, user_name, rating, review) VALUES (1, "Olivia", 5, "Awesome video!");
+INSERT INTO reviewers (user_id, user_name, rating, review) VALUES (1, "Emma", 5, "Great video!");
+INSERT INTO reviewers (user_id, user_name, rating, review) VALUES (2, "Leo", 3, "Video was confusing!");
+INSERT INTO reviewers (user_id, user_name, rating, review) VALUES (2, "Frank", 5, "Very comphresive lecture!");
+INSERT INTO reviewers (user_id, user_name, rating, review) VALUES (3, "Jenna", 5, "Great information!");
+INSERT INTO reviewers (user_id, user_name, rating, review) VALUES (3, "Ray", 5, "Short and concise!");
+INSERT INTO reviewers (user_id, user_name, rating, review) VALUES (4, "Tom", 2, "I am stil convfused!");
+INSERT INTO reviewers (user_id, user_name, rating, review) VALUES (4, "Cindy", 5, "Loved it!");
 
 SELECT * FROM reviewers;
 
 SELECT * 
 FROM videos v
 JOIN reviewers r
-On v.ID = r.ID;
+On v.ID = r.user_id;
 	
     
